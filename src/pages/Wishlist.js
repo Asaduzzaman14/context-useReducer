@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { useProducts } from '../context/ProductProvider';
 
-const Home = () => {
+const Wishlist = () => {
 
     const { state: { products, loading, error } } = useProducts()
 
@@ -27,12 +27,14 @@ const Home = () => {
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl gap-14 mx-auto my-10'>
-            <h2 className='text-2xl'>This is Home</h2>
-
-            {content}
+            <h2 className='text-2xl'>This is Wishlist</h2>
+            {
+                content
+                // products?.map((product) => <ProductCard product={product}></ProductCard>)
+            }
 
         </div>
     );
 };
 
-export default Home;
+export default Wishlist;

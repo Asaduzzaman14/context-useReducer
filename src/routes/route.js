@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
-import About from "./About";
-import Cart from "./Cart";
-import Home from "./Home";
-import TopRated from "./TopRated";
+import About from "../pages/About";
+import Cart from "../pages/Cart";
+import Home from "../pages/Home";
+import TopRated from "../pages/TopRated";
+import Wishlist from "../pages/Wishlist";
 
 
 
@@ -24,6 +25,10 @@ const routes = createBrowserRouter([
             {
                 path: "top-rated",
                 element: <TopRated />,
+            },
+            {
+                path: "wishlist",
+                element: <Wishlist />,
             },
             {
                 path: "cart",
